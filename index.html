@@ -3611,7 +3611,7 @@
         if (isPagiActive && isMalamActive) {
           const pagiTabCls = isMalamTime ? '' : 'active'; const malamTabCls = isMalamTime ? 'active' : ''; const pagiGrpCls = isMalamTime ? 'hidden' : ''; const malamGrpCls = isMalamTime ? '' : 'hidden';
           html += `
-      <div class="tabs" style="margin:10px 14px 0;"><button class="tab ${pagiTabCls}" onclick="switchDashShiftTab(this, '${idPrefix}-pagi', '${idPrefix}-grp')">â˜€️ Shift Pagi</button><button class="tab ${malamTabCls}" onclick="switchDashShiftTab(this, '${idPrefix}-malam', '${idPrefix}-grp')">🌙 Shift Malam</button></div>
+      <div class="tabs p-2" style="border-bottom:1px solid var(--bdr2);"><button class="tab ${pagiTabCls}" onclick="switchDashShiftTab(this, '${idPrefix}-pagi', '${idPrefix}-grp')">☀️ Shift Pagi</button><button class="tab ${malamTabCls}" onclick="switchDashShiftTab(this, '${idPrefix}-malam', '${idPrefix}-grp')">🌙 Shift Malam</button></div>
       <div id="${idPrefix}-pagi" class="${idPrefix}-grp ${pagiGrpCls}">${buildStatCards(roleTarget, getSafeStat(statsData, 'pagi'), 'Pagi')}</div><div id="${idPrefix}-malam" class="${idPrefix}-grp ${malamGrpCls}">${buildStatCards(roleTarget, getSafeStat(statsData, 'malam'), 'Malam')}</div>`;
         } else if (isPagiActive) { html += `<div style="padding-top:8px;">${buildStatCards(roleTarget, getSafeStat(statsData, 'pagi'), 'Pagi')}</div>`; } else if (isMalamActive) { html += `<div style="padding-top:8px;">${buildStatCards(roleTarget, getSafeStat(statsData, 'malam'), 'Malam')}</div>`; } else { html += `<div style="padding-top:8px;">${buildStatCards(roleTarget, getSafeStat(statsData, 'pagi'), 'Pagi')}</div>`; }
         return html;
@@ -3667,7 +3667,7 @@
 
           shiftSectionHtml = `
         <div class="tabs" style="margin:14px 14px 0;">
-          <button class="tab ${pAct}" onclick="switchDashShiftTab(this, 'ss-pagi', 'ss-grp')">â˜€️ Shift Pagi</button>
+          <button class="tab ${pAct}" onclick="switchDashShiftTab(this, 'ss-pagi', 'ss-grp')">☀️ Shift Pagi</button>
           <button class="tab ${mAct}" onclick="switchDashShiftTab(this, 'ss-malam', 'ss-grp')">🌙 Shift Malam</button>
         </div>
         <div id="ss-pagi" class="ss-grp ${pVis}">${buildShiftDetail('Pagi', conf.JAM_MASUK_PAGI, conf.JAM_PULANG_PAGI, t.masuk, t.pulang, 'wb_sunny', '#b45309')}</div>
